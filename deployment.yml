@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: first-angular-app  # Container name (can match deployment name)
-        image: firstangularapp.azurecr.io/first-angular-app:latest  # Replace with your ACR login server and image name
+        image: first-angular-app:latest  # Replace with your ACR login server and image name
         ports:
         - containerPort: 80  # Expose the container port (usually 80 for Angular apps)
         # Volume mounts for additional configuration (optional)
