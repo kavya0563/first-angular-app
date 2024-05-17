@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: first-angular-app  # Replace with your desired deployment name
 spec:
-  replicas: 1  # Number of pods to run
+  replicas: 2  # Number of pods to run
   selector:
     matchLabels:
       app: first-angular-app  # Match with the label in the pod spec
