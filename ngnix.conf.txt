@@ -1,0 +1,12 @@
+server {
+    listen 80;  # Port to listen on (assuming your Dockerfile exposes port 80)
+    server_name localhost;  # Adjust if needed for your domain name
+
+    # Replace 'your-app-name' with your actual Angular application's name built for production
+    root /usr/share/nginx/html/your-app-name;
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ /index.html;  # Important for Angular routing
+    }
+}
