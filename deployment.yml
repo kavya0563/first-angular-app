@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: first-angular-app  # Replace with your desired deployment name
+  name: first-angular-app  
 spec:
-  replicas: 2  # Number of pods to run
+  replicas: 2  un
   selector:
     matchLabels:
       app: first-angular-app  # Match with the label in the pod spec
@@ -13,16 +13,8 @@ spec:
         app: first-angular-app  # Label for pod selection
     spec:
       containers:
-      - name: first-angular-app  # Container name (can match deployment name)
-        image: first-angular-app:latest  # Replace with your ACR login server and image name
+      - name: first-angular-app  
+        image: first-angular-app:latest  
         ports:
         - containerPort: 80  # Expose the container port (usually 80 for Angular apps)
-        # Volume mounts for additional configuration (optional)
-        # volumeMounts:
-        #   - name: config-volume
-        #     mountPath: /app/config  # Mount a config file or directory
-      # Volume definitions for persistent storage (optional)
-      # volumes:
-      #   - name: config-volume
-      #     configMap:
-      #       name: config-map  # Reference an existing config map
+        
